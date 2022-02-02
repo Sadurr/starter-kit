@@ -1,0 +1,30 @@
+<mvc:View
+    controllerName="stk.starterkit.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+
+    <Shell id="shell">
+        <App id="app">
+             <pages>
+                <Page id="page" title="{i18n>Title}">   
+                    <content>
+                       	 <Carousel width="80%" height="70%" >
+                            <pages>
+                                <Image width="60%" height="80%" src="https://kunstvensters.com/wp-content/uploads/2018/12/Cover.025.jpeg" />
+                                <Image width="40%" height="80%" src="https://artetc.nl/wp-content/uploads/basquiat-trumpet-02.jpg" />
+                                <Image width="45%" height="80%" src="https://artetc.nl/wp-content/uploads/basquiat-jm-skull-01.jpg" />
+                                <Image width="50%" height="80%" src="https://www.passion-estampes.com/deco2/basquiat/basquiat-untitled-fishing-1981.jpg" />
+                             </pages>
+
+                             <customLayout>
+                                <CarouselLayout visiblePagesCount="2"/>
+                             </customLayout>
+                         </Carousel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

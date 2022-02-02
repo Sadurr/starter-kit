@@ -1,0 +1,41 @@
+<mvc:View 
+    controllerName="stk.starterkit.controller.CustomersList" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout"
+    displayBlock="true"
+    xmlns="sap.m">
+
+    <Shell id="shell">
+     <App id="app">
+
+       <pages>
+
+    <Page
+    id="CreateCustomer"
+    showNavButton="true" 
+    navButtonPress="handleNavButtonPress" 
+    title="Create New Customer">
+
+          <Bar>
+    <contentRight>
+        <Button text="Create" press="onCreate" type="Accept" icon="sap-icon://accept" class="sapUiResponsiveMargin"/>
+    </contentRight>
+      </Bar>
+ 
+    <l:VerticalLayout >
+        	<l:HorizontalLayout class="sapUiResponsiveMargin">
+                <Label text="Customer ID:" class="sapUiSmallMarginBegin sapUiTinyMarginTopBottom" width="125px"/>  
+                <Input id="CustomerID"/>
+            </l:HorizontalLayout>
+            <l:HorizontalLayout class="sapUiResponsiveMargin">
+                <Label text="Customer Name:" class="sapUiSmallMarginBegin" width="125px"/>  
+                <Input id="CustomerName" />
+            </l:HorizontalLayout>
+    </l:VerticalLayout>
+
+           </Page>
+       </pages>
+      </App>
+    </Shell>
+</mvc:View>

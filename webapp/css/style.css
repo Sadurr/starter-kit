@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+
+.greenBackground{
+    background: green;
+}
+
+/* not working */
+.alernatingColors tr:nth-child(even) {
+        background-color: rgb(233, 233, 233) !important;
+}
+
+.blackText tr:hover span {
+    color: rgb(0, 0, 0) !important;
+}
+
+.titleBackground {
+    background-color: rgb(237, 250, 255) !important;
+}

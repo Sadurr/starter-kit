@@ -1,0 +1,57 @@
+<mvc:View 
+    controllerName="stk.starterkit.controller.CustomersList" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout"
+    displayBlock="true"
+    xmlns="sap.m">
+
+    <Shell id="shell">
+     <App id="app">
+    
+       <pages> 
+
+    <Page id="Performance" >
+
+    <Bar class="titleBackground sapUiTinyMarginBottom">
+     <contentMiddle>
+     <Title text="Performance" />
+    </contentMiddle>
+     </Bar>
+
+          <Table items="{path: '/Employees', parameters: {expand: 'Orders' } }" class="blackText alernatingColors" > 
+            <items >
+            <ColumnListItem >
+                    <cells>
+                       <Text text="{FirstName} {LastName}"/>
+                      <Text text="{Title}"/>
+                      <Text text="{= ${Orders}.length}"/>
+                        <HBox >
+                        <Button text="Motivate" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" press="onMotivate" />       
+                        <Button text="Fire"  class="sapUiSmallMarginBottom" press="onFire"/>       
+                        </HBox>       
+                    </cells>
+                </ColumnListItem>
+        </items>
+            <columns>
+                <Column >
+                    <Label text="Name" class="sapUiTinyMarginTopBottom"/>
+                </Column>
+                <Column>
+                    <Label text="Position" class="sapUiTinyMarginTopBottom"/>
+                </Column>
+                <Column > 
+                    <Label text="Orders" class="sapUiTinyMarginTopBottom"/>
+                </Column>
+                 <Column>
+                    <Label text="Actions" class="sapUiTinyMarginTopBottom"/>
+                </Column>
+            </columns>
+        </Table>
+ 
+
+           </Page>
+       </pages>
+      </App>
+    </Shell>
+</mvc:View>       
